@@ -12,7 +12,7 @@ class Category(models.Model):
             models.Index(fields=['name']),
         ]
         verbose_name = 'categories'
-        verbose_name_plural - 'categories'
+        verbose_name_plural = 'categories'
 
         def __str__(self):
             return self.name 
@@ -24,7 +24,7 @@ class Product(models.Model):
     image = models.DecimalField(max_digits=10, decimal_places=2)
     available = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True)
-    updated = models.DataTimeField(auto_now=True)
+    updated = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['name']
